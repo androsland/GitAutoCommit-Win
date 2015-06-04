@@ -14,11 +14,16 @@ For more information on these events, go to ***inotify-win***'s repo (link in th
 * Run filechangelistener.sh. This files uses inotifywait to listen to file changes
 * Run autocommit.sh. This file will commit any changes caught by filechangelistener to the local repository. No push available. Change accordingly.
 
+## Services
+To make the scripts run without interference, you can create a Windows service ***for each one***.<br>
+Start cmd as an administrator and execute the following command to create a service
+```
+sc create service_name binPath= "full_path_to_script" displayname= "display_name" start= auto
+```
+**service_name:** Give your service a name.<br>
+**full_path_to_script:** Full path to the the script you want to make a service of.<br>
+**display_name:** A name that will be displayed for the service.<br>
+
 ## References
 * inotify-win by thekid (https://github.com/thekid/inotify-win)
-
-
-
-
-
 
