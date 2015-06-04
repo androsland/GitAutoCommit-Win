@@ -8,9 +8,11 @@ For more information on these events, go to ***inotify-win***'s repo (link in th
 * Git for Windows (e.g. https://git-scm.com/ [recommend])
 * An executable of inotify-win. A compiled one is already included in the repo
 
+#### WARNING: Running filechangelistener.sh will delete any existing .git folders and initialize a new git repository in the directory where it exists. **YOU HAVE BEEN WARNED**.
+
 ## How to use
-* (OPTIONAL) Edit filechangelistener.sh and autocommit.sh and set the DUMMYFILE and DIR variables. <br>
-*Please note that the DIR variable is "." so you will have to place the files in the folder you want to autocommit.*
+* (OPTIONAL) Edit filechangelistener.sh and autocommit.sh and set the DUMMYFILE variable. <br>
+*Please note that the scripts reference the directory where they exist, so you will have to place the scripts in the folder you want the autocommit feature to be applied.*
 * Run filechangelistener.sh. This files uses inotifywait to listen to file changes
 * Run autocommit.sh. This file will commit any changes caught by filechangelistener to the local repository. No push available. Change accordingly.
 
