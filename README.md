@@ -33,6 +33,8 @@ sc create service_name binPath= "full_path_to_script" displayname= "display_name
 Making batch files and executables run as services is not allowed in older versions of Windows (tested on Windows Server 2003).<br>
 A possible alternative is creating tasks that run the scripts every N minutes. This makes sure that the scripts are always running. Just make sure you set the task up to destroy itself every time it is recreated!
 
+**Task scheduler versions of the scripts are located in the scheduler folder in the repository**
+
 ## References
 * inotify-win by thekid (https://github.com/thekid/inotify-win)
 
