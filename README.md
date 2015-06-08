@@ -16,7 +16,7 @@ For more information on these events, go to ***inotify-win***'s repo (link in th
 * Run filechangelistener.sh. This files uses inotifywait to listen to file changes
 * Run autocommit.sh. This file will commit any changes caught by filechangelistener to the local repository. No push available. Change accordingly.
 
-## Services
+## Making the scripts run as services
 *For Windows 7,8 Systems*
 
 To make the scripts run without interference, you can create a Windows service ***for each one***.<br>
@@ -31,7 +31,8 @@ sc create service_name binPath= "full_path_to_script" displayname= "display_name
 *For older versions of Windows systems*
 
 Making batch files and executables run as services is not allowed in older versions of Windows (tested on Windows Server 2003).<br>
-A possible alternative is creating tasks that run the scripts every N minutes. This makes sure that the scripts are always running. Just make sure you destroy the
+A possible alternative is creating tasks that run the scripts every N minutes. This makes sure that the scripts are always running. Just make sure you set the task up to destroy itself every time it is recreated!
+
 ## References
 * inotify-win by thekid (https://github.com/thekid/inotify-win)
 
